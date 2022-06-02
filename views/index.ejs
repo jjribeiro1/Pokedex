@@ -1,0 +1,45 @@
+<!--VIEW-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>POKEDEX</title>
+  </head>
+  <body>
+    <header>
+      <h1>POKEDEX</h1>
+      <nav>
+        <ul>
+          <li> <a href="/">Início</a> </li>
+          <li> <a href="/cadastro">Cadastro</a> </li>
+        </ul>
+      </nav>
+    </header>
+  
+
+      <main>
+        <section id="content">
+
+          <% pokedex.forEach((pokemon) => { %>
+            <div class="card">
+
+              <img src=" <%= pokemon.imagem %>" alt="">
+
+              <h3><%= pokemon.nome %></h2>
+
+              <p> <strong>Tipo:</strong> <%= pokemon.tipo %></p>
+
+              <p> <strong>Descrição:</strong> <%= pokemon.descricao %></p>
+
+              <p><%= pokemon.id %></p>
+              <a id="editar" href="/edit/<%= pokemon.id %>">Editar</a>
+              <a id="deletar" href="/delete/<%= pokemon.id %>">Excluir</a>
+            </div>
+          <% })  %>
+        </section>
+      </main>
+  </body>
+</html>

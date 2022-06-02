@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: Poppins;
+}
+
+
+/* estilização header  */
+header {
+    background-color:#E82738;
+    padding: 1rem;
+}
+
+header h1 {
+    color:#fff;
+    font-size:2.7rem;
+    text-align: center;
+}
+
+/* estilização navbar */
+
+nav ul{
+    display:flex;
+    list-style: none;
+    font-size:1.5rem;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* estilização form */
+
+section#cadastro{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:5rem;
+}
+
+section#cadastro h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom:2rem;
+}
+section#cadastro form input{
+    width: 100%;
+    padding:.7rem;
+    font-size:1.3rem;
+}
+
+section#cadastro form button#btnCadastrar{
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 0.6rem;
+    width: 10%;
+    font-size: 1rem;
+    background-color: rgb(238, 27, 27);
+    color: #fff;
+    border: solid 1px red;
+    cursor: pointer;
+}
+
+section#cadastro form button#btnAtualizar{
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 0.6rem;
+    width: 10%;
+    font-size: 1rem;
+    background-color: rgb(238, 27, 27);
+    color: #fff;
+    border: solid 1px red;
+    cursor: pointer;
+}
+

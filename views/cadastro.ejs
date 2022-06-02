@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+        <h1>POKEDEX</h1>
+        <nav>
+          <ul>
+            <li> <a href="/">Início</a> </li>
+            <li> <a href="/cadastro">Cadastro</a> </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+          <section id="cadastro">
+
+            <% if(pokemon == undefined) { %>
+            <h2> NOVO POKEMON</h2>
+              <form action="/new" method="POST">
+                <label for="nome" id="nome" name="nome">Nome</label>
+                <input type="text" id="nome" name = "nome" required pattern="[A-Za-z]{3,}" title ="No mínino 3 letras sem números e caracteres especiais">
+
+                <label for="tipo" id="tipo" name="tipo">Tipo</label>
+                <input type="text" id="tipo" name = "tipo" required minlength="3">
+
+                <label for="descricao" id="descricao" name="descricao">Descrição</label>
+                <input type="text" id="descricao" name = "descricao" required minlength="5">
+
+                <label for="imagem" id="imagem" name="imagem">Imagem:</label>
+                <input type="text" id="imagem" name = "imagem" required> 
+                <button type="submit" id="btnCadastrar"> Cadastrar</button>
+              </form>
+
+              <% } else { %>
+          
+                <h2> Atualize seu pokemon</h2>
+
+                <form action="/update/<%= pokemon.id %>" method="POST">
+                  <label for="nome">Nome:</label>
+                  <input type="text" id="nome" name="nome" value="<%= pokemon.nome %>" required pattern="[A-Za-z]{3,}" title ="No mínino 3 letras sem números e caracteres especiais">
+
+                  <label for="tipo">Tipo:</label>
+                  <input type="text" id="tipo" name="tipo" value="<%= pokemon.tipo %>" required minlength="3">
+
+                  <label for="descricao">Descrição:</label>
+                  <input type="text" id="descricao" name="descricao" value="<%= pokemon.descricao %>" required minlength="5">
+
+                  <label for="imagem">Link da Imagem</label>
+                  <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem %>" required>
+
+                  <button id="btnAtualizar" type="submit">Atualizar</button>
+              </form>
+                <% } %>
+          </section>
+          
+      </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Pokedex mvc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvsr18/Pokedex.git"
+  },
+  "author": "João Vitor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvsr18/Pokedex/issues"
+  },
+  "homepage": "https://github.com/jvsr18/Pokedex#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
